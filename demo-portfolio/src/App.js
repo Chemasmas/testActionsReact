@@ -16,6 +16,18 @@ function App() {
   const toast = useRef(null);
   const [products, setProducts] = useState(null);
 
+  var promise = new Promise( (resolve, reject) => {
+
+    let name = 'Paul'
+  
+    if (name === 'Paul') {
+     resolve("Promise resolved successfully");
+    }
+    else {
+     reject(Error("Promise rejected"));
+    }
+   });
+
   const onImageLoad = () => {
       toast.current.show({ severity: 'success', summary: 'Image Initialized', detail: 'Scroll down to load the datatable' });
   }
